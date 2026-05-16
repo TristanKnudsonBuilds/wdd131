@@ -1,0 +1,58 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Georgia, serif;
+}
+
+.card {
+    background-color: white;
+    width: 600px;
+    margin: 50px auto;
+    padding: 60px;
+    border: 1px solid #d3d3d3;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #006EB6;
+    font-size: 16px;
+    letter-spacing: 4px;
+    font-weight: normal;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 0;
+    border-top: 1px solid #d3d3d3;
+}
+
+p {
+    font-size: 24px;
+    line-height: 1.7;
+}
+
+.italic {
+    font-style: italic;
+}
+
+ol {
+    font-size: 24px;
+    line-height: 1.8;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+img {
+    display: block;
+    margin: 40px auto 0;
+    width: 150px;
+}
