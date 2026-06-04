@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A book blog review page for WDD 131">
+  <meta name="author" content="Tristan Knudson">
+  <title>Book Blog</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Kids Read For Fun</h1>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Archive</a>
+      <a href="#">Search</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="book-review">
+      <section class="book-info">
+        <p><strong>Date:</strong> July 5, 2022</p>
+        <p><strong>Age:</strong> 10 to 14</p>
+        <p><strong>Genre:</strong> Fantasy</p>
+        <p><strong>Rating:</strong> ★★★★☆</p>
+      </section>
+
+      <section class="book-content">
+        <h2>Septimus Heap Book One: Magyk</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Magkycover2.jpg" alt="Cover of Magyk by Angie Sage">
+        <p>
+          If you enjoy stories about magic, mystery, and adventure, <em>Magyk</em>
+          is a fun fantasy book to read. It follows a young boy named Septimus Heap
+          and introduces a world full of wizards, secrets, and danger.
+        </p>
+        <a href="#" aria-label="Read more about Magyk by Angie Sage">Read more...</a>
+      </section>
+    </article>
+
+    <aside>
+      <h2>Filters</h2>
+      <form>
+        <label for="sort">Sort by:</label>
+        <select id="sort" name="sort">
+          <option value="date">Date</option>
+          <option value="rating">Rating</option>
+          <option value="genre">Genre</option>
+        </select>
+      </form>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Book Blog</p>
+  </footer>
+</body>
+</html>
