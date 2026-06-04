@@ -35,12 +35,13 @@ nav a {
 }
 
 main {
-  padding: 0.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
 }
 
 .book-review {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 200px 1fr;
   border-bottom: 2px solid #e6c59e;
   padding-bottom: 1rem;
 }
