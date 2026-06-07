@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d9e4ec;
+    margin: 0;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #d9e4ec;
+    padding: 1rem;
+}
+
+form {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: .25rem;
+    font-size: .9rem;
+}
+
+input,
+select {
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: .75rem;
+}
+
+.name-row,
+.type-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: .6rem;
+    background-color: #c5d3df;
+    border: 1px solid #444;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#error,
+#errors {
+    color: darkred;
+    margin-top: .5rem;
+}
+
+#ticketInfo {
+    margin-top: 1rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
