@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Disciple</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="charactercard.js" defer></script>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Disciple">
+    <meta property="og:description" content="Dark Aether Entity from Black Ops Cold War Zombies">
+    <meta property="og:image" content="images/disciple.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Disciple">
+    <meta name="twitter:description" content="Dark Aether Entity">
+    <meta name="twitter:image" content="images/disciple.jpg">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="card">
+
+    <img class="image" src="images/disciple.png" alt="The Disciple">
+
+    <div class="name" id="name"></div>
+
+    <div class="stats">
+        <p><strong>Class:</strong> <span id="class"></span></p>
+        <p><strong>Level:</strong> <span id="level"></span></p>
+        <p><strong>Health:</strong> <span id="health"></span></p>
+    </div>
+
+    <div class="buttons">
+        <button onclick="attack()">Attack (-20)</button>
+        <button onclick="levelUp()">Level Up (+1)</button>
+    </div>
+
+</div>
+
+</body>
+</html>

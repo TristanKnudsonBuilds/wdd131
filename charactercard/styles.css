@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #090011;
+}
+
+.card{
+    background:#1a0826;
+    width:400px;
+    margin:50px auto;
+    border-radius:20px;
+    box-shadow:0 0 25px purple;
+    overflow:hidden;
+}
+
+.image{
+    width:100%;
+}
+
+.name{
+    background:#6d00a8;
+    color:white;
+    padding:20px;
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.stats{
+    padding:20px;
+    color:white;
+    font-size:1.1rem;
+}
+
+.stats p{
+    margin:15px 0;
+}
+
+.buttons{
+    text-align:center;
+    padding-bottom:20px;
+}
+
+button{
+    padding:10px 15px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    background:#8000ff;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#c000ff;
+    box-shadow:0 0 15px violet;
+}
