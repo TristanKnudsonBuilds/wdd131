@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laser Starter Guide | Site Plan</title>
+
+    <meta name="description" content="Site plan for the Laser Starter Guide web application.">
+    <meta name="author" content="Tristan Knudson">
+
+    <link rel="stylesheet" href="styles/site-plan.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Laser Starter Guide</h1>
+    <p>Learn Laser Safety Through Interactive Exploration</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>Site Name</h2>
+
+        <p>
+            Laser Starter Guide
+        </p>
+
+        <p>
+            This application helps beginners understand laser technology,
+            safety, and wavelength selection through an interactive quiz.
+        </p>
+    </section>
+
+    <section>
+
+        <h2>Purpose</h2>
+
+        <p>
+            The mission of Laser Starter Guide is to educate new laser hobbyists through an interactive, beginner-friendly experience that makes laser wavelengths, power levels, beam characteristics, and laser safety easy to understand.
+        </p>
+
+        <p>
+            Instead of overwhelming users with technical terminology, the application will guide them through a short interactive quiz and recommend an appropriate beginner-friendly laser based on their interests, intended use, and experience level. Throughout the experience, users will also learn important laser safety practices and why choosing the correct laser matters.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Audience</h2>
+
+        <p>
+            Laser Starter Guide is designed primarily for beginners who are interested in learning about visible lasers but have little or no previous experience. Whether someone is curious about laser pointers, handheld lasers, or simply wants to understand how different wavelengths and power levels work, this application provides an easy-to-follow starting point.
+        </p>
+
+        <p>
+            The content is written in clear, beginner-friendly language so users can confidently learn about laser classes, beam characteristics, wavelengths, and safe operating practices without feeling overwhelmed by technical terminology. More experienced hobbyists may also use the application as a quick reference, but the primary focus is helping new users build a strong foundation in laser safety and technology.
+        </p>
+
+    </section>
+
+    <section>
+        <h2>Dynamic Elements</h2>
+
+        <p>
+            JavaScript will be used to create an interactive quiz that guides users through a series of beginner-friendly questions. Each question will be displayed one at a time, and the user will select an answer by clicking a button. The application will save the user's choices, update a progress indicator, and display the next question without reloading the page.
+        </p>
+
+        <p>
+            The quiz questions and laser recommendations will be stored in arrays of objects. JavaScript array methods such as <code>forEach()</code>, <code>filter()</code>, and <code>map()</code> will be used to display answer choices, compare the user's responses with available laser options, and generate the final recommendation.
+        </p>
+
+        <p>
+            Conditional branching will determine which laser option is most appropriate based on the user's experience level, intended use, preferred wavelength, and safety preferences. The application will use DOM manipulation to update the quiz card, progress bar, recommendation details, and safety warnings. Event listeners will respond to answer selections, navigation buttons, the learn-more button, and the restart-quiz button.
+        </p>
+    </section>
+
+    <section>
+        <h2>Pseudocode</h2>
+
+        <pre><code>
+    START APPLICATION
+
+    Create an array of quiz question objects
+
+    Create an array of laser option objects
+
+    Create an empty object to store the user's answers
+
+    Set the current question number to 0
+
+    Select the quiz container, progress bar, result container,
+    and navigation buttons from the HTML
+
+    CALL displayQuestion function
+
+    FUNCTION displayQuestion
+        Get the current question from the questions array
+        Display the question text
+        Create a button for each answer choice
+        Add a click event listener to each answer button
+        Update the progress bar
+    END FUNCTION
+
+    WHEN the user selects an answer
+        Save the selected answer in the user answers object
+        Increase the current question number by 1
+
+        IF more questions remain
+            CALL displayQuestion function
+        ELSE
+            CALL calculateRecommendation function
+        END IF
+    END EVENT
+
+    FUNCTION calculateRecommendation
+        Filter the laser options based on:
+            User experience
+            Preferred wavelength or color
+            Intended use
+            Safety preferences
+
+        IF the user has no laser experience
+            Limit the result to a beginner-friendly,
+            low-powered laser option
+        END IF
+
+        IF multiple laser options match
+            Calculate a score for each option
+            Select the option with the highest score
+        END IF
+
+        CALL displayRecommendation function
+    END FUNCTION
+
+    FUNCTION displayRecommendation
+        Hide the quiz section
+        Show the result section
+        Display the recommended wavelength
+        Display the suggested power range
+        Display the laser class
+        Display an explanation of why it matches
+        Display the appropriate safety information
+
+        IF the result requires additional eye protection
+            Display a wavelength-specific safety warning
+        END IF
+    END FUNCTION
+
+    WHEN the user clicks the Learn More button
+        Display additional information about the recommended wavelength
+    END EVENT
+
+    WHEN the user clicks the Restart Quiz button
+        Clear the saved answers
+        Set the current question number back to 0
+        Hide the result section
+        Show the quiz section
+        CALL displayQuestion function
+    END EVENT
+
+    END APPLICATION
+        </code></pre>
+    </section>
+
+    <section>
+
+
+        <h2>Wireframe</h2>
+
+        <p>
+            The following wireframe illustrates the planned layout of the Laser Starter Guide web application for both desktop and mobile devices.
+        </p>
+
+        <figure>
+            <img src="images/wireframe.png"
+                alt="Desktop and mobile wireframe for the Laser Starter Guide web application">
+
+            <figcaption>
+                Planned layout for the Laser Starter Guide application.
+            </figcaption>
+        </figure>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+        WDD131 Personal Project Plan<br>
+        Tristan Knudson
+    </p>
+
+</footer>
+
+</body>
+</html>
