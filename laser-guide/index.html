@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laser Starter Guide</title>
+
+    <meta
+        name="description"
+        content="An interactive beginner guide to laser wavelengths, power levels, classifications, and safe use."
+    >
+    <meta name="author" content="Tristan Knudson">
+
+    <link rel="stylesheet" href="laser-guide.css">
+    <script src="laser-guide.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="main-navigation" aria-label="Main navigation">
+
+            <a class="site-logo" href="#home">
+                <span class="logo-icon" aria-hidden="true">✴</span>
+                <span>Laser Starter Guide</span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="navigation-links"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <ul class="navigation-links" id="navigation-links">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#quiz">Quiz</a>
+                </li>
+
+                <li>
+                    <a href="#learn">Learn</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+            </ul>
+
+            <button
+                class="theme-button"
+                id="theme-button"
+                type="button"
+                aria-label="Switch between light and dark themes"
+            >
+                <span aria-hidden="true">☀</span>
+            </button>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Welcome Screen -->
+
+        <section
+            class="screen welcome-screen"
+            id="home"
+            aria-labelledby="welcome-heading"
+        >
+
+            <div class="hero-image-container">
+                <img
+                    class="hero-image"
+                    src="images/visible-spectrum.webp"
+                    alt="Visible light spectrum ranging from violet at 380 nanometers to red at 750 nanometers"
+                    width="1200"
+                    height="450"
+                >
+            </div>
+
+            <div class="welcome-content">
+
+                <h1 id="welcome-heading">
+                    Find Your First Laser Safely and Confidently
+                </h1>
+
+                <p class="welcome-description">
+                    Answer a few simple questions to learn which beginner
+                    laser option best matches your interests and experience.
+                </p>
+
+            </div>
+
+            <section
+                class="feature-section"
+                aria-labelledby="feature-heading"
+            >
+
+                <h2 class="visually-hidden" id="feature-heading">
+                    Application Features
+                </h2>
+
+                <div class="feature-list">
+
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">♢</span>
+
+                        <div>
+                            <h3>Learn Safety</h3>
+
+                            <p>
+                                Understand basic laser classifications and
+                                important safety practices.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">◎</span>
+
+                        <div>
+                            <h3>Get a Recommendation</h3>
+
+                            <p>
+                                Receive a personalized beginner-friendly
+                                starting suggestion.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">▤</span>
+
+                        <div>
+                            <h3>Learn as You Go</h3>
+
+                            <p>
+                                Explore wavelengths, power levels, visibility,
+                                and important terminology.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+
+            <div class="primary-action-container">
+                <button
+                    class="primary-button"
+                    id="start-quiz-button"
+                    type="button"
+                >
+                    Start the Quiz
+                    <span aria-hidden="true">→</span>
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- Quiz Screen -->
+
+        <section
+            class="screen quiz-screen"
+            id="quiz"
+            aria-labelledby="question-heading"
+            hidden
+        >
+
+            <div class="quiz-progress">
+
+                <p id="question-progress">
+                    Question 1 of 5
+                </p>
+
+                <div
+                    class="progress-track"
+                    id="progress-track"
+                    role="progressbar"
+                    aria-label="Quiz progress"
+                    aria-valuemin="1"
+                    aria-valuemax="5"
+                    aria-valuenow="1"
+                >
+                    <div
+                        class="progress-fill"
+                        id="progress-fill"
+                    ></div>
+                </div>
+
+            </div>
+
+            <div class="quiz-layout">
+
+                <article class="question-card">
+
+                    <h1 id="question-heading">
+                        Where do you plan to use your laser most?
+                    </h1>
+
+                    <p id="question-instructions">
+                        Choose the option that best matches your main use.
+                    </p>
+
+                </article>
+
+                <div
+                    class="answer-options"
+                    id="answer-options"
+                    role="group"
+                    aria-labelledby="question-heading"
+                >
+                    <!-- JavaScript will create answer buttons here. -->
+                </div>
+
+            </div>
+
+            <aside class="safety-tip" aria-labelledby="safety-tip-heading">
+
+                <span class="safety-tip-icon" aria-hidden="true">♢</span>
+
+                <div>
+                    <h2 id="safety-tip-heading">Safety Tip</h2>
+
+                    <p id="quiz-safety-tip">
+                        Never aim a laser at people, animals, vehicles,
+                        reflective surfaces, or aircraft.
+                    </p>
+                </div>
+
+            </aside>
+
+            <div class="quiz-navigation">
+
+                <button
+                    class="secondary-button"
+                    id="previous-button"
+                    type="button"
+                    disabled
+                >
+                    <span aria-hidden="true">←</span>
+                    Previous
+                </button>
+
+                <button
+                    class="primary-button"
+                    id="next-button"
+                    type="button"
+                    disabled
+                >
+                    Next Question
+                    <span aria-hidden="true">→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Recommendation Screen -->
+
+        <section
+            class="screen result-screen"
+            id="result"
+            aria-labelledby="result-heading"
+            hidden
+        >
+
+            <header class="screen-heading">
+
+                <span class="result-heading-icon" aria-hidden="true">✴</span>
+
+                <h1 id="result-heading">
+                    Your Recommended Starting Laser
+                </h1>
+
+            </header>
+
+            <article
+                class="recommendation-card"
+                id="recommendation-card"
+            >
+
+                <div
+                    class="recommendation-image"
+                    aria-hidden="true"
+                >
+                    ✴
+                </div>
+
+                <div class="recommendation-summary">
+
+                    <div class="recommendation-title-row">
+
+                        <h2 id="result-name">
+                            Green Laser
+                        </h2>
+
+                        <span
+                            class="recommendation-label"
+                            id="result-label"
+                        >
+                            Great for Beginners
+                        </span>
+
+                    </div>
+
+                    <dl class="recommendation-facts">
+
+                        <div>
+                            <dt>Wavelength</dt>
+                            <dd id="result-wavelength">532 nm</dd>
+                        </div>
+
+                        <div>
+                            <dt>Power range</dt>
+                            <dd id="result-power">1–5 mW</dd>
+                        </div>
+
+                        <div>
+                            <dt>Class</dt>
+                            <dd id="result-class">Class 3R</dd>
+                        </div>
+
+                    </dl>
+
+                </div>
+
+            </article>
+
+            <div class="result-information-grid">
+
+                <article
+                    class="result-explanation"
+                    aria-labelledby="explanation-heading"
+                >
+
+                    <h2 id="explanation-heading">
+                        Why this matches you
+                    </h2>
+
+                    <p id="result-explanation">
+                        Green light is highly visible to the human eye, so it
+                        appears bright even at relatively low power. It can be
+                        an approachable option for learning about visible
+                        wavelengths while maintaining a strong focus on safety.
+                    </p>
+
+                </article>
+
+                <aside
+                    class="important-warning"
+                    aria-labelledby="warning-heading"
+                >
+
+                    <h2 id="warning-heading">
+                        <span aria-hidden="true">⚠</span>
+                        Important Safety Information
+                    </h2>
+
+                    <p id="result-safety">
+                        Avoid direct eye exposure and reflective surfaces.
+                        Follow the product manufacturer's instructions and use
+                        certified protective eyewear when required.
+                    </p>
+
+                </aside>
+
+            </div>
+
+            <div class="result-actions">
+
+                <button
+                    class="primary-button"
+                    id="learn-more-button"
+                    type="button"
+                >
+                    Learn More About This Laser
+                </button>
+
+                <button
+                    class="secondary-button"
+                    id="restart-result-button"
+                    type="button"
+                >
+                    <span aria-hidden="true">↻</span>
+                    Restart Quiz
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Learn More Screen -->
+
+        <section
+            class="screen learn-screen"
+            id="learn"
+            aria-labelledby="learn-heading"
+            hidden
+        >
+
+            <button
+                class="text-button"
+                id="back-to-result-button"
+                type="button"
+            >
+                <span aria-hidden="true">←</span>
+                Back to Result
+            </button>
+
+            <div class="learn-introduction">
+
+                <div
+                    class="laser-illustration"
+                    aria-hidden="true"
+                >
+                    ✴
+                </div>
+
+                <div>
+
+                    <h1 id="learn-heading">
+                        Green Laser (532 nm)
+                    </h1>
+
+                    <p id="learn-description">
+                        Green lasers are known for their strong visibility and
+                        are often used for educational demonstrations,
+                        astronomy pointing, alignment, and visual effects.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="detail-list">
+
+                <article class="detail-card">
+                    <span class="detail-icon" aria-hidden="true">〰</span>
+
+                    <div>
+                        <h2>Wavelength</h2>
+                        <p id="learn-wavelength">
+                            532 nanometers, commonly perceived as green light.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="detail-card">
+                    <span class="detail-icon" aria-hidden="true">ϟ</span>
+
+                    <div>
+                        <h2>Typical Power Range</h2>
+                        <p id="learn-power">
+                            A low-output 1–5 mW product may be more appropriate
+                            for introductory education than a high-powered
+                            device.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="detail-card">
+                    <span class="detail-icon" aria-hidden="true">♢</span>
+
+                    <div>
+                        <h2>Laser Class</h2>
+                        <p id="learn-class">
+                            Class 3R products require caution and responsible
+                            handling.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="detail-card">
+                    <span class="detail-icon" aria-hidden="true">◉</span>
+
+                    <div>
+                        <h2>Visibility</h2>
+                        <p id="learn-visibility">
+                            Green light appears especially visible to the human
+                            eye, even at relatively low output.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="detail-card">
+                    <span class="detail-icon" aria-hidden="true">▰</span>
+
+                    <div>
+                        <h2>Safety Glasses</h2>
+                        <p id="learn-eyewear">
+                            Protective eyewear must be certified for the
+                            specific wavelength and optical density required
+                            by the product.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+            <button
+                class="primary-button full-width-button"
+                id="learn-back-button"
+                type="button"
+            >
+                Back to Result
+            </button>
+
+        </section>
+
+
+        <!-- Restart Screen -->
+
+        <section
+            class="screen restart-screen"
+            id="restart"
+            aria-labelledby="restart-heading"
+            hidden
+        >
+
+            <div class="trophy-container" aria-hidden="true">
+                🏆
+            </div>
+
+            <h1 id="restart-heading">
+                Ready to Try Again?
+            </h1>
+
+            <p>
+                You can retake the quiz and explore different options based on
+                your interests and experience.
+            </p>
+
+            <div class="restart-actions">
+
+                <button
+                    class="primary-button"
+                    id="restart-quiz-button"
+                    type="button"
+                >
+                    <span aria-hidden="true">↻</span>
+                    Restart Quiz
+                </button>
+
+                <button
+                    class="secondary-button"
+                    id="back-home-button"
+                    type="button"
+                >
+                    <span aria-hidden="true">⌂</span>
+                    Back to Home
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- About Section -->
+
+        <section
+            class="about-section"
+            id="about"
+            aria-labelledby="about-heading"
+        >
+
+            <h2 id="about-heading">
+                About This Guide
+            </h2>
+
+            <p>
+                Laser Starter Guide is an educational web application created
+                to introduce beginners to visible wavelengths, power ranges,
+                classifications, and responsible laser use.
+            </p>
+
+            <p>
+                Recommendations are general educational examples and are not a
+                replacement for manufacturer documentation, certified laser
+                safety training, or applicable laws and regulations.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <p>
+            Laser Starter Guide
+        </p>
+
+        <p>
+            Educational information only. Never direct a laser toward people,
+            animals, vehicles, or aircraft.
+        </p>
+
+        <p>
+            &copy; <span id="current-year">2026</span> Tristan Knudson
+        </p>
+
+    </footer>
+
+    <noscript>
+        <p class="noscript-message">
+            JavaScript must be enabled to use the interactive quiz.
+        </p>
+    </noscript>
+
+</body>
+</html>
