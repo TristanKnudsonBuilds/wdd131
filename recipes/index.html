@@ -7,68 +7,59 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Recipe Book">
-  <meta property="og:description" content="A simple recipe book featuring delicious apple crisp.">
+  <meta property="og:description" content="A simple recipe book featuring delicious recipes.">
   <meta property="og:url" content="https://TristanKnudsonBuilds.github.io/wdd131/recipes/">
   <meta property="og:image" content="images/apple-crisp.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Recipe Book">
-  <meta name="twitter:description" content="A simple recipe book featuring delicious apple crisp.">
+  <meta name="twitter:description" content="Browse delicious recipes.">
   <meta name="twitter:image" content="images/apple-crisp.jpg">
 
   <link rel="apple-touch-icon" href="images/recipe-book.png">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <div class="logo-title">
-      <img src="images/recipe-book.png" alt="Recipe Book logo">
-      <h1>Recipe Book</h1>
-    </div>
 
-    <form class="search">
-      <input type="search" placeholder="Find a recipe" aria-label="Search recipes">
-      <button type="submit">
-        <img src="images/search.svg" alt="Search">
-      </button>
-    </form>
-  </header>
+<header>
+  <div class="logo-title">
+    <img src="images/recipe-book.png" alt="Recipe Book logo">
+    <h1>Recipe Book</h1>
+  </div>
 
-  <main>
-    <article class="recipe-card">
-      <img class="recipe-image" src="images/apple-crisp.jpg" alt="Apple crisp with ice cream">
+  <form class="search">
+    <input
+      type="search"
+      placeholder="Find a recipe"
+      aria-label="Search recipes">
 
-      <div class="recipe-info">
-        <span class="tag">Dessert</span>
-        <h2>Apple Crisp</h2>
+    <button type="submit" aria-label="Search">
+      <img src="images/search.svg" alt="">
+    </button>
+  </form>
+</header>
 
-        <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">⭐</span>
-          <span aria-hidden="true">☆</span>
-        </span>
+<main id="recipe-container">
+  <!-- JavaScript inserts recipe cards here -->
+</main>
 
-        <p class="description">
-          This apple crisp recipe is warm, sweet, and perfect with a scoop of vanilla ice cream.
-          It is an easy dessert made with tender apples and a crunchy cinnamon topping.
-        </p>
-      </div>
-    </article>
-  </main>
+<footer>
 
-  <footer>
-    <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">
-      Recipe icons created by Freepik - Flaticon
-    </a>
+  <a href="https://www.flaticon.com/free-icons/recipe"
+     title="recipe icons">
+    Recipe icons created by Freepik - Flaticon
+  </a>
 
-    <div class="social">
-      <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
-      <a href="#"><img src="images/instagram_icon.svg" alt="Instagram icon"></a>
-      <a href="#"><img src="images/youtube_icon.svg" alt="YouTube icon"></a>
-      <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest icon"></a>
-    </div>
-  </footer>
+  <div class="social">
+    <a href="#"><img src="images/instagram_icon.svg" alt="Instagram icon"></a>
+    <a href="#"><img src="images/youtube_icon.svg" alt="YouTube icon"></a>
+    <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest icon"></a>
+  </div>
+
+</footer>
+
+<script src="recipes.js"></script>
+
 </body>
 </html>
